@@ -101,7 +101,7 @@ nav ul li a {
 
 .product img {
   width: 250px;
-  height: auto;
+  height: 350px;
   object-fit: cover;
   display: block;
   margin: 0 auto;
@@ -189,72 +189,188 @@ footer {
   margin: 0 auto;
   display: block;
 }
-/*-------------- Footer ------------------*/
-.footer {
-  padding: 96px 135px 0;
-  background: #2e2100;
+/* -------------- About us ------------------ */
+.aboutus {
+  padding: 50px 0;
+  text-align: center;
 }
-.footer .row {
-  display: flex;
-  padding-bottom: 38px;
-  border-bottom: 1px solid #59554b;
-}
-.footer .row .column {
-  width: 21.6%;
-}
-
-.footer .row .column:first-child {
-  width: 35%;
-  color: #bfbcb2;
-  font-size: 1.4rem;
-  line-height: 1.85; /* 185.714% */
-}
-.footer .desc {
-  margin-top: 18px;
-  max-width: 267px;
-}
-.footer .socials {
-  display: flex;
-  gap: 18px;
-  margin-top: 18px;
-}
-.footer .title {
-  border-bottom: 1px solid #59554b;
+.about {
   display: inline-block;
-  padding: 0 48px 14px 0;
-  font-weight: 600;
-  color: #fff;
-  font-size: 1.6rem;
-  line-height: 1.75;
+  margin: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 40px);
+  box-sizing: border-box;
 }
-.footer .list {
-  margin-top: 48px;
-}
-.footer .list li {
+.about a {
   text-decoration: none;
 }
-.footer .list a {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: #bfbcb2;
-  font-size: 1.4rem;
-  line-height: 1.85;
+.about img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
 }
+/* shoes */
 
-.footer .list li:last-child a {
-  margin-bottom: 0;
-}
-.footer .list strong {
-  color: #fff;
-  font-size: 1.4rem;
-}
-.footer .copyright {
-  padding: 28px 0;
-}
-
-.footer .copyright p {
-  color: #807d74;
+/*-------------- Footer ------------------*/
+footer {
+  background-color: #333;
+  color: white;
   text-align: center;
-  font-size: 1.4rem;
-  line-height: 1.86; /* 185.714% */
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.footer-column h3 {
+  border-bottom: 2px solid #ff6f61;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+/* 3 mục mới */
+#clothes,
+#shoes,
+#accessories {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#clothes .product,
+#shoes .product,
+#accessories .product {
+  display: inline-block;
+  margin: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 40px);
+  box-sizing: border-box;
+}
+
+#clothes .product img,
+#shoes .product img,
+#accessories .product img {
+  max-width: 100%;
+  height: 350px;
+  display: block;
+  margin: 0 auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+#clothes .product h3,
+#shoes .product h3,
+#accessories .product h3 {
+  font-size: 1.5em;
+  margin: 20px 0 10px;
 }

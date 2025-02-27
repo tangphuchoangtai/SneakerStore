@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sneaker Store</title>
+    <title>Accessories - Sneaker Store</title>
     <link rel="stylesheet" href="./style/style.css" />
-    <script src="scripts/jquery-3.6.0.min.js"></script>
-    <script src="scripts/main.js"></script>
   </head>
   <body>
     <header>
@@ -15,7 +13,7 @@
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#products">Products</a></li>
+            <li><a href="index.html#products">Products</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="login.html">Login</a></li>
@@ -30,51 +28,41 @@
       </div>
     </header>
     <main>
-      <section id="home" class="hero">
+      <section id="accessories" class="products">
         <div class="container">
-          <h2>Welcome to Sneaker Store</h2>
-          <p>
-            Your one-stop shop for the latest and greatest in sneaker fashion.
-          </p>
-          <a href="#products" class="btn">Shop Now</a>
-        </div>
-      </section>
-      <!----------------- Featured Products ------------------>
-      <section id="products" class="products">
-        <div class="container">
-          <h2>Featured Products</h2>
+          <h2>Accessories</h2>
           <div class="product">
-            <img src="images/giay.jpg" alt="Sneaker" />
-            <h3>Sporty Sneaker</h3>
-            <p>$99.99</p>
+            <img src="images/placeholder.jpg" alt="Accessories" />
+            <h3>Sporty Accessories</h3>
+            <p>$29.99</p>
             <button
               class="btn add-to-cart"
-              data-name="Sporty Sneaker"
-              data-price="99.99"
+              data-name="Sporty Accessories"
+              data-price="29.99"
             >
               Add to Cart
             </button>
           </div>
           <div class="product">
-            <img src="images/giay.jpg" alt="Sneaker" />
-            <h3>Casual Sneaker</h3>
-            <p>$79.99</p>
+            <img src="images/placeholder.jpg" alt="Accessories" />
+            <h3>Casual Accessories</h3>
+            <p>$19.99</p>
             <button
               class="btn add-to-cart"
-              data-name="Casual Sneaker"
-              data-price="79.99"
+              data-name="Casual Accessories"
+              data-price="19.99"
             >
               Add to Cart
             </button>
           </div>
           <div class="product">
-            <img src="images/giay.jpg" alt="Sneaker" />
-            <h3>Running Sneaker</h3>
-            <p>$119.99</p>
+            <img src="images/placeholder.jpg" alt="Accessories" />
+            <h3>Running Accessories</h3>
+            <p>$39.99</p>
             <button
               class="btn add-to-cart"
-              data-name="Running Sneaker"
-              data-price="119.99"
+              data-name="Running Accessories"
+              data-price="39.99"
             >
               Add to Cart
             </button>
@@ -82,49 +70,11 @@
           <!-- Add more products as needed -->
         </div>
       </section>
-
-      <!----------------- About ------------------------>
-      <section id="about" class="aboutus">
-        <div class="container">
-          <h2>About Us</h2>
-          <p>
-            We are passionate about sneakers and committed to bringing you the
-            best selections.
-          </p>
-          <div class="about">
-            <a href="clothes.html">
-              <img src="images/trung.jpg" alt="Sneaker"
-            /></a>
-            <a href="clothes.html"> <h3>Clothes</h3> </a>
-          </div>
-          <div class="product">
-            <a href="shoes.html">
-              <img src="images/trung.jpg" alt="Sneaker"
-            /></a>
-            <a href="shoes.html"> <h3>Shoes</h3> </a>
-          </div>
-          <div class="product">
-            <a href="accessories.html">
-              <img src="images/trung.jpg" alt="Sneaker"
-            /></a>
-            <a href="accessories.html"> <h3>Accessories</h3> </a>
-          </div>
-        </div>
-      </section>
-      <section id="contact" class="contact">
-        <div class="container">
-          <h2>Contact Us</h2>
-          <p>Email: info@sneakerstore.com</p>
-          <p>Phone: (123) 456-7890</p>
-        </div>
-      </section>
     </main>
-
-    <!------------------ Footer --------------------->
     <footer>
       <div class="container footer-container">
         <div class="footer-logo">
-          <img src="./images/logo.jpg" alt="Sneaker Store Logo" />
+          <img src="images/logo.png" alt="Sneaker Store Logo" />
           <p>Your favorite place to shop for sneakers.</p>
         </div>
         <div class="footer-column">
@@ -165,5 +115,7 @@
         <button class="btn" onclick="checkout()">Checkout</button>
       </div>
     </div>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
