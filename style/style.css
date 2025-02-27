@@ -1,0 +1,260 @@
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em 0;
+}
+
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* body */
+header h1 {
+  text-align: center;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: url("../images/placeholder.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 3em;
+  color: #333;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 10px 0 30px;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ff3f31;
+}
+
+.products {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.product {
+  display: inline-block;
+  margin: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 40px);
+  box-sizing: border-box;
+}
+
+.product img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.product h3 {
+  font-size: 1.5em;
+  margin: 20px 0 10px;
+}
+
+.about,
+.contact {
+  padding: 50px 0;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+/*-------------- Footer ------------------*/
+.footer {
+  padding: 96px 135px 0;
+  background: #2e2100;
+}
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+.footer .row .column {
+  width: 21.6%;
+}
+
+.footer .row .column:first-child {
+  width: 35%;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.85; /* 185.714% */
+}
+.footer .desc {
+  margin-top: 18px;
+  max-width: 267px;
+}
+.footer .socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+.footer .title {
+  border-bottom: 1px solid #59554b;
+  display: inline-block;
+  padding: 0 48px 14px 0;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+.footer .list {
+  margin-top: 48px;
+}
+.footer .list li {
+  text-decoration: none;
+}
+.footer .list a {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 1.85;
+}
+
+.footer .list li:last-child a {
+  margin-bottom: 0;
+}
+.footer .list strong {
+  color: #fff;
+  font-size: 1.4rem;
+}
+.footer .copyright {
+  padding: 28px 0;
+}
+
+.footer .copyright p {
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.86; /* 185.714% */
+}

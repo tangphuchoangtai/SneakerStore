@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneaker Store</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Sneaker Store</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li>
+              <a href="#" id="cart-link"
+                >Cart (<span id="cart-count">0</span>)</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <h2>Welcome to Sneaker Store</h2>
+          <p>
+            Your one-stop shop for the latest and greatest in sneaker fashion.
+          </p>
+          <a href="#products" class="btn">Shop Now</a>
+        </div>
+      </section>
+      <section id="products" class="products">
+        <div class="container">
+          <h2>Featured Products</h2>
+          <div class="product">
+            <img src="images/giay.jpg" alt="Sneaker" />
+            <h3>Sporty Sneaker</h3>
+            <p>$99.99</p>
+            <button
+              class="btn add-to-cart"
+              data-name="Sporty Sneaker"
+              data-price="99.99"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/giay.jpg" alt="Sneaker" />
+            <h3>Casual Sneaker</h3>
+            <p>$79.99</p>
+            <button
+              class="btn add-to-cart"
+              data-name="Casual Sneaker"
+              data-price="79.99"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/giay.jpg" alt="Sneaker" />
+            <h3>Running Sneaker</h3>
+            <p>$119.99</p>
+            <button
+              class="btn add-to-cart"
+              data-name="Running Sneaker"
+              data-price="119.99"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <!-- Add more products as needed -->
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="container">
+          <h2>About Us</h2>
+          <p>
+            We are passionate about sneakers and committed to bringing you the
+            best selections.
+          </p>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <p>Email: info@sneakerstore.com</p>
+          <p>Phone: (123) 456-7890</p>
+        </div>
+      </section>
+    </main>
+
+    <!------------------ Footer --------------------->
+    <footer class="footer">
+      <div class="main-content">
+        <div class="row">
+          <!----- Column 1 ------>
+          <div class="column">
+            <img
+              src="./assets/img/Lesson-white..svg"
+              alt="Lesson"
+              class="logo"
+            />
+            <p class="desc">
+              Need to help for your dream Career? trust us. With Lesson, study
+              becomes a lot easier with us.
+            </p>
+            <div class="socials">
+              <a href="#!">
+                <img src="./icon/twitter.svg" alt="twitter" class="icon" />
+              </a>
+              <a href="#!">
+                <img src="./icon/facebook.svg" alt="facebook" class="icon" />
+              </a>
+              <a href="#!">
+                <img src="./icon/linkedin.svg" alt="linkedin" class="icon" />
+              </a>
+              <a href="#!">
+                <img src="./icon/instagram.svg" alt="instagram" class="icon" />
+              </a>
+            </div>
+          </div>
+
+          <!----- Column 2 ------>
+          <div class="column">
+            <h3 class="title">Company</h3>
+            <ul class="list">
+              <li class="li">
+                <a href="#!">About Us</a>
+              </li>
+              <li class="li">
+                <a href="#!">Features</a>
+              </li>
+              <li class="li">
+                <a href="#!">Our Pricing</a>
+              </li>
+              <li class="li">
+                <a href="#!">Latest News</a>
+              </li>
+            </ul>
+          </div>
+
+          <!----- Column 3 ------>
+          <div class="column">
+            <h3 class="title">Support</h3>
+            <ul class="list">
+              <li class="li">
+                <a href="#!">Terms & Conditions</a>
+              </li>
+              <li class="li">
+                <a href="#!">Privacy Policy</a>
+              </li>
+              <li class="li">
+                <a href="#!">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!----- Column 4 ------>
+          <div class="column">
+            <h3 class="title">Address</h3>
+            <ul class="list">
+              <li class="li">
+                <a href="#!">
+                  <strong>Location: </strong>
+                  27 Division St, New York, NY 10002, USA
+                </a>
+              </li>
+              <li class="li">
+                <a href="#!"><strong>Email:</strong> email@gmail.com</a>
+              </li>
+              <li class="li">
+                <a href="#!"><strong>Phone:</strong> + 000 1234 567 890</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright ©2022 webdesign.gdn All rights reserved</p>
+      </div>
+    </footer>
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+        <button class="btn" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
