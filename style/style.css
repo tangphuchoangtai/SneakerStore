@@ -191,35 +191,127 @@ footer {
 }
 /* -------------- About us ------------------ */
 .aboutus {
-  padding: 50px 0;
   text-align: center;
 }
-.about {
-  display: inline-block;
-  margin: 20px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: calc(33.333% - 40px);
-  box-sizing: border-box;
+
+.aboutlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.about a {
-  text-decoration: none;
+
+.aboutitems {
+  text-align: center;
+  flex: 1;
+  margin: 0 10px; /* Adjust the margin as needed to space the items */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow */
+  background-color: #f0f0f0; /* Background color */
+  padding: 20px; /* Space inside the container */
+  position: relative; /* To position the horizontal line */
 }
-.about img {
-  width: 250px;
-  height: auto;
-  object-fit: cover;
+
+.aboutitems img.thumb {
   display: block;
+  max-width: 200px; /* Adjust the size as needed */
+  height: 250px;
   margin: 0 auto;
-  max-height: 200px;
-  object-fit: cover;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 20px;
+}
+
+.aboutitems a,
+.aboutitems h3 {
+  text-decoration: none;
+  color: inherit; /* Keep the color the same as the parent */
+  margin: 10px 0; /* Margin between the image and the text */
+}
+
+.aboutitems .line {
+  width: 80%; /* Adjust the width as needed */
+  height: 1px;
+  padding-top: 0.5px;
+  background-color: #000; /* Color of the line */
+  margin: 10px auto; /* Space between the image and the line */
 }
 /* shoes */
+.shoes {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
 
+.shoes .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shoes h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.shoes p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.shoes .products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the products */
+  gap: 20px;
+}
+
+.shoes .product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  flex: 1 1 calc(25% - 20px); /* four products per row */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px; /* spacing between rows */
+  max-width: calc(25% - 20px); /* Ensure products don't grow larger */
+}
+
+.shoes .product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shoes .product img.thumb {
+  width: 100%;
+  height: 250px; /* Adjusted height for larger images */
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.shoes .product h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.shoes .product p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.shoes .btn.add-to-cart {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.shoes .btn.add-to-cart:hover {
+  background-color: #218838;
+}
 /*-------------- Footer ------------------*/
 footer {
   background-color: #333;
