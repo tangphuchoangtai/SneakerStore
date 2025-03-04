@@ -249,6 +249,7 @@ nav ul li a {
   flex: 1;
   margin: 10px;
   padding: 20px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -412,84 +413,167 @@ nav ul li a {
   margin: 10px auto; /* Space between the image and the line */
 }
 /* shoes */
-.shoes {
+.shoes-section {
   padding: 20px;
   background-color: #f9f9f9;
 }
 
-.shoes .container {
-  max-width: 1200px;
-  margin: 0 auto;
+.shoes-container-title {
   text-align: center;
-}
-
-.shoes h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.shoes p {
-  font-size: 1.2em;
   margin-bottom: 20px;
 }
 
-.shoes .products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the products */
-  gap: 20px;
+.shoes-nameshop {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
-.shoes .product {
-  background-color: #fff;
+.shoes-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shoes-product {
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
-  flex: 1 1 calc(25% - 20px); /* four products per row */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin-bottom: 20px; /* spacing between rows */
-  max-width: calc(25% - 20px); /* Ensure products don't grow larger */
+  width: 250px; /* Increase the width */
+  background-color: #ffffff;
+  box-sizing: border-box; /* Ensure padding and borders are included in the width */
 }
 
-.shoes .product:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.shoes .product img.thumb {
+.shoes-product img.shoes-thumb {
   width: 100%;
-  height: 250px; /* Adjusted height for larger images */
-  object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-.shoes .product h3 {
-  font-size: 1.5em;
+  height: 200px; /* Increase the height */
+  object-fit: cover; /* Ensure images cover the area without stretching */
   margin-bottom: 10px;
 }
 
-.shoes .product p {
-  font-size: 1.2em;
-  color: #333;
-  margin-bottom: 15px;
+.shoes-product h3 {
+  font-size: 1.4em; /* Increase the font size */
+  margin-bottom: 10px;
 }
 
-.shoes .btn.add-to-cart {
+.shoes-product p {
+  font-size: 1.2em; /* Increase the font size */
+  margin-bottom: 10px;
+}
+
+.shoes-product .shoes-options {
+  margin-bottom: 10px;
+}
+
+.shoes-product label {
+  display: inline-block;
+  margin-right: 5px; /* Add margin to the right */
+}
+
+.shoes-product select {
+  padding: 5px;
+}
+
+.shoes-product .shoes-btn {
   background-color: #28a745;
-  color: #fff;
+  color: #ffffff;
   border: none;
-  padding: 10px 20px;
-  font-size: 1em;
+  padding: 10px 15px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  border-radius: 5px;
+  width: 100%; /* Ensure button width matches the product width */
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-.shoes .btn.add-to-cart:hover {
+.shoes-product .shoes-btn:hover {
   background-color: #218838;
+}
+
+/* Cart Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Cart item styles */
+.cart-thumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#cart-items li {
+  list-style: none;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+/* Cart Modal Styles */
+.cart-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.cart-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 /*-------------- Footer ------------------*/
 footer {

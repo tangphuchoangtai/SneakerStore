@@ -7,25 +7,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateCart();
 
-  $("#cart-link").on("click", function () {
+  $("#cart-link").on("click", function (event) {
+    event.preventDefault();
     showCart();
   });
 
-  $(".add-to-cart").on("click", function () {
+  $(".shoes-add-to-cart").on("click", function () {
+    const productElement = $(this).closest(".shoes-product");
     const productName = $(this).data("name");
     const productPrice = parseFloat($(this).data("price"));
-    addToCart(productName, productPrice);
+    const productSize = productElement.find(".shoes-size").val();
+    const productColor = productElement.find(".shoes-color").val();
+    const productImg = $(this).data("img");
+    addToCart(productName, productPrice, productSize, productColor, productImg);
   });
 });
 
-function addToCart(productName, productPrice) {
+function addToCart(
+  productName,
+  productPrice,
+  productSize,
+  productColor,
+  productImg
+) {
   let cart = JSON.parse(localStorage.getItem("cart"));
 
-  cart.push({ name: productName, price: productPrice });
+  cart.push({
+    name: productName,
+    price: productPrice,
+    size: productSize,
+    color: productColor,
+    img: productImg,
+  });
 
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  alert(`${productName} has been added to your cart.`);
+  alert(
+    `${productName} (${productSize}, ${productColor}) has been added to your cart.`
+  );
   updateCart();
 }
 
@@ -37,7 +56,11 @@ function updateCart() {
   cartItems.empty();
 
   cart.forEach((item) => {
-    let li = $("<li></li>").text(`${item.name} - $${item.price.toFixed(2)}`);
+    let li = $("<li></li>").html(
+      `<img src="${item.img}" alt="${item.name}" class="cart-thumb"> ${
+        item.name
+      } (Size: ${item.size}, Color: ${item.color}) - $${item.price.toFixed(2)}`
+    );
     cartItems.append(li);
     totalPrice += item.price;
   });
@@ -65,6 +88,7 @@ function checkout() {
     alert("Your cart is empty.");
   }
 }
+
 // JavaScript to handle the dropdown menu functionality
 document.addEventListener("DOMContentLoaded", (event) => {
   const dropdown = document.querySelector(".dropdown");
