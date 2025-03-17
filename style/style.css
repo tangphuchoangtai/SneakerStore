@@ -90,6 +90,14 @@ nav ul li a:hover {
 .form-group label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .form-group input {
@@ -123,7 +131,8 @@ nav ul li a {
   display: inline-block;
   padding: 10px 20px;
   background-color: #ff6f61;
-  color: white;
+  background: black;
+  color: rgb(56, 40, 40);
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -375,43 +384,39 @@ nav ul li a {
 }
 
 .aboutlist {
+  max-width: 1200px;
+  padding: 40px 0px 30px 0px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .aboutitems {
-  text-align: center;
   flex: 1;
-  margin: 0 10px; /* Adjust the margin as needed to space the items */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding shadow */
-  background-color: #f0f0f0; /* Background color */
-  padding: 20px; /* Space inside the container */
-  position: relative; /* To position the horizontal line */
+  margin: 10px;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.aboutitems img.thumb {
-  display: block;
-  max-width: 200px; /* Adjust the size as needed */
-  height: 250px;
-  margin: 0 auto;
-}
-
-.aboutitems a,
-.aboutitems h3 {
+.aboutitems h2 {
   text-decoration: none;
-  color: inherit; /* Keep the color the same as the parent */
-  margin: 10px 0; /* Margin between the image and the text */
+  margin-bottom: 20px;
+  text-align: center;
+  align-items: center;
 }
 
-.aboutitems .line {
-  width: 80%; /* Adjust the width as needed */
-  height: 1px;
-  padding-top: 0.5px;
-  background-color: #000; /* Color of the line */
-  margin: 10px auto; /* Space between the image and the line */
+.aboutitems ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
 }
+.aboutitems a {
+  text-decoration: none;
+  color: white;
+}
+
 /* shoes */
 .shoes-section {
   padding: 20px;
@@ -575,6 +580,7 @@ nav ul li a {
   text-decoration: none;
   cursor: pointer;
 }
+
 /*-------------- Footer ------------------*/
 footer {
   background-color: #333;

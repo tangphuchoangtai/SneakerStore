@@ -1,0 +1,57 @@
+/* Register */
+.form-section {
+  width: 100%;
+  max-width: 600px; /* Adjust the max-width as needed */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.form-wrapper {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+}
+
+.register__body .btn-register {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.register__body .btn-register:hover {
+  background-color: #218838;
+  color: #fff;
+}
+
+/* Login */
+.login__body .btn-login {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.login__body .btn-login:hover {
+  background-color: #218838;
+  color: #fff;
+}
+.login__body .checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__body .checkbox-group input[type="checkbox"] {
+  margin-right: 50px;
+}
