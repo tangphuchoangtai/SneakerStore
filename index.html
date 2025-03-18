@@ -34,8 +34,8 @@
                 <li class="dropdown">
                   <a href="#about" class="dropbtn">About</a>
                   <div class="dropdown-content">
-                    <a href="shoes.html">Men's shoes</a>
-                    <a href="womenshoes.html">women's shoes</a>
+                    <a href="man-shoes.html">Men's shoes</a>
+                    <a href="women-shoes.html">women's shoes</a>
                     <a href="accessories.html">Accessories</a>
                   </div>
                 </li>
@@ -55,183 +55,185 @@
     </header>
 
     <main>
-      <!-- Hero top -->
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <!-- Carousel indicators -->
-        <ol class="carousel-indicators">
-          <li
+      <div class="information__website">
+        <!-- Hero top -->
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- Carousel indicators -->
+          <ol class="carousel-indicators">
+            <li
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="0"
+              class="active"
+            ></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for carousel items -->
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="500">
+              <img
+                src="https://file.hstatic.net/200000355547/file/a_tuyen_nhan_vat_chinh_cua_vu_tru_lucky_luke_deu_duoc_tu_hop_trong_bst_7b6c8b5dcee84e619c31dc6d8ba37c7b.jpg"
+                class="d-block w-100"
+                alt="Slide 1"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="500">
+              <img
+                src="https://ananas.vn/wp-content/uploads/Hi-im-Mule_1920x1050-Desktop.jpg"
+                class="d-block w-100"
+                alt="Slide 2"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="500">
+              <img
+                src="https://ananas.vn/wp-content/uploads/Web1920-1.jpeg"
+                class="d-block w-100"
+                alt="Slide 3"
+              />
+            </div>
+          </div>
+
+          <!-- Carousel controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
             data-bs-target="#myCarousel"
-            data-bs-slide-to="0"
-            class="active"
-          ></li>
-          <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-          <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for carousel items -->
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="500">
-            <img
-              src="https://file.hstatic.net/200000355547/file/a_tuyen_nhan_vat_chinh_cua_vu_tru_lucky_luke_deu_duoc_tu_hop_trong_bst_7b6c8b5dcee84e619c31dc6d8ba37c7b.jpg"
-              class="d-block w-100"
-              alt="Slide 1"
-            />
-          </div>
-          <div class="carousel-item" data-bs-interval="500">
-            <img
-              src="https://ananas.vn/wp-content/uploads/Hi-im-Mule_1920x1050-Desktop.jpg"
-              class="d-block w-100"
-              alt="Slide 2"
-            />
-          </div>
-          <div class="carousel-item" data-bs-interval="500">
-            <img
-              src="https://ananas.vn/wp-content/uploads/Web1920-1.jpeg"
-              class="d-block w-100"
-              alt="Slide 3"
-            />
-          </div>
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
 
-        <!-- Carousel controls -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-      <!-- Hero -->
-      <section id="home" class="hero">
-        <div class="container-title">
-          <h2>Welcome to Sneaker Store</h2>
-          <p>
-            Your one-stop shop for the latest and greatest in sneaker fashion.
-          </p>
-        </div>
-      </section>
-
-      <!----------------- Featured Products ------------------>
-      <div class="featured">
-        <div class="body">
-          <div class="container">
-            <div class="promo">
-              <a href="#!">
-                <img
-                  src="https://ananas.vn/wp-content/uploads/banner-phu%CC%A3_2m-600x320.jpg"
-                  alt="Although considered a phenomenon, the allure of black always
-              creates an endless sense of mystery."
-              /></a>
-              <h2>All Black in Black</h2>
-              <p>
-                Although considered a phenomenon, the allure of black always
-                creates an endless sense of mystery.
-              </p>
-            </div>
-            <div class="promo">
-              <a href="#!">
-                <img
-                  src="https://ananas.vn/wp-content/uploads/Banner_Sale-off-1.jpg"
-                  alt="ảnh 2"
-              /></a>
-              <h2>Outlet Sale</h2>
-              <p>
-                The list of products you experience at the "best price" is only
-                sold through the online channel - Online Only. We are gradually
-                updating with further discounts, and currently, sizes and
-                quantities are still available.
-              </p>
-            </div>
+        <!-- Hero -->
+        <section id="home" class="hero">
+          <div class="container-title">
+            <h2>Welcome to Sneaker Store</h2>
+            <p>
+              Your one-stop shop for the latest and greatest in sneaker fashion.
+            </p>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <!----------------- About ------------------------>
-      <section id="about" class="aboutus">
-        <div class="main-content">
-          <h2>About Us</h2>
-          <p>
-            We are passionate about sneakers and committed to bringing you the
-            best selections.
-          </p>
-          <!-- About List -->
+        <!----------------- Featured Products ------------------>
+        <div class="featured">
           <div class="body">
-            <!-- Item 1 -->
-            <div class="aboutlist container-fluid hidden-xs hidden-sm">
-              <div
-                class="aboutitems"
-                style="
-                  background-image: url('https://ananas.vn/wp-content/uploads/catalogy-1.jpg');
-                "
-              >
+            <div class="container">
+              <div class="promo">
                 <a href="#!">
-                  <h2>men's shoes</h2>
-                </a>
-                <ul>
-                  <li><a href="#!">New Arrivals</a></li>
-                  <li><a href="#!">Best Seller</a></li>
-                  <li><a href="#!">Sale-off</a></li>
-                </ul>
+                  <img
+                    src="https://ananas.vn/wp-content/uploads/banner-phu%CC%A3_2m-600x320.jpg"
+                    alt="Although considered a phenomenon, the allure of black always
+              creates an endless sense of mystery."
+                /></a>
+                <h2>All Black in Black</h2>
+                <p>
+                  Although considered a phenomenon, the allure of black always
+                  creates an endless sense of mystery.
+                </p>
               </div>
-
-              <!-- Item 2 -->
-              <div
-                class="aboutitems"
-                style="
-                  background-image: url('https://ananas.vn/wp-content/uploads/catalogy-2.jpg');
-                "
-              >
+              <div class="promo">
                 <a href="#!">
-                  <h2>women's shoes</h2>
-                </a>
-                <ul>
-                  <li><a href="#!">New Arrivals</a></li>
-                  <li><a href="#!">Best Seller</a></li>
-                  <li><a href="#!">Sale-off</a></li>
-                </ul>
-              </div>
-
-              <!-- Item 3 -->
-              <div
-                class="aboutitems"
-                style="
-                  background-image: url('https://ananas.vn/wp-content/uploads/catalogy-3.jpg');
-                "
-              >
-                <a href="#!">
-                  <h2>Other product lines</h2>
-                </a>
-                <ul>
-                  <li><a href="#!">Ananas</a></li>
-                  <li><a href="#!">Bassas</a></li>
-                  <li><a href="#!">Vintas</a></li>
-                  <li><a href="#!">Urbas</a></li>
-                  <li><a href="#!">Pattas</a></li>
-                </ul>
+                  <img
+                    src="https://ananas.vn/wp-content/uploads/Banner_Sale-off-1.jpg"
+                    alt="ảnh 2"
+                /></a>
+                <h2>Outlet Sale</h2>
+                <p>
+                  The list of products you experience at the "best price" is
+                  only sold through the online channel - Online Only. We are
+                  gradually updating with further discounts, and currently,
+                  sizes and quantities are still available.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section id="contact" class="contact">
-        <div class="container-title">
-          <h2>Contact Us</h2>
-          <p>Email: info@sneakerstore.com</p>
-          <p>Phone: (123) 456-7890</p>
-        </div>
-      </section>
+
+        <!----------------- About ------------------------>
+        <section id="about" class="aboutus">
+          <div class="main-content">
+            <h2>About Us</h2>
+            <p>
+              We are passionate about sneakers and committed to bringing you the
+              best selections.
+            </p>
+            <!-- About List -->
+            <div class="body">
+              <!-- Item 1 -->
+              <div class="aboutlist container-fluid hidden-xs hidden-sm">
+                <div
+                  class="aboutitems"
+                  style="
+                    background-image: url('https://ananas.vn/wp-content/uploads/catalogy-1.jpg');
+                  "
+                >
+                  <a href="#!">
+                    <h2>men's shoes</h2>
+                  </a>
+                  <ul>
+                    <li><a href="#!">New Arrivals</a></li>
+                    <li><a href="#!">Best Seller</a></li>
+                    <li><a href="#!">Sale-off</a></li>
+                  </ul>
+                </div>
+
+                <!-- Item 2 -->
+                <div
+                  class="aboutitems"
+                  style="
+                    background-image: url('https://ananas.vn/wp-content/uploads/catalogy-2.jpg');
+                  "
+                >
+                  <a href="#!">
+                    <h2>women's shoes</h2>
+                  </a>
+                  <ul>
+                    <li><a href="#!">New Arrivals</a></li>
+                    <li><a href="#!">Best Seller</a></li>
+                    <li><a href="#!">Sale-off</a></li>
+                  </ul>
+                </div>
+
+                <!-- Item 3 -->
+                <div
+                  class="aboutitems"
+                  style="
+                    background-image: url('https://ananas.vn/wp-content/uploads/catalogy-3.jpg');
+                  "
+                >
+                  <a href="#!">
+                    <h2>Other product lines</h2>
+                  </a>
+                  <ul>
+                    <li><a href="#!">Ananas</a></li>
+                    <li><a href="#!">Bassas</a></li>
+                    <li><a href="#!">Vintas</a></li>
+                    <li><a href="#!">Urbas</a></li>
+                    <li><a href="#!">Pattas</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="contact">
+          <div class="container-title">
+            <h2>Contact Us</h2>
+            <p>Email: info@sneakerstore.com</p>
+            <p>Phone: (123) 456-7890</p>
+          </div>
+        </section>
+      </div>
     </main>
 
     <!------------------ Footer --------------------->

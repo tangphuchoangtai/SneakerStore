@@ -21,6 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const productImg = $(this).data("img");
     addToCart(productName, productPrice, productSize, productColor, productImg);
   });
+
+  // Close modal when clicking outside of it
+  $(window).on("click", function (event) {
+    if ($(event.target).is("#cart-modal")) {
+      closeCart();
+    }
+  });
 });
 
 function addToCart(
@@ -55,11 +62,12 @@ function updateCart() {
 
   cartItems.empty();
 
-  cart.forEach((item) => {
+  cart.forEach((item, index) => {
     let li = $("<li></li>").html(
       `<img src="${item.img}" alt="${item.name}" class="cart-thumb"> ${
         item.name
-      } (Size: ${item.size}, Color: ${item.color}) - $${item.price.toFixed(2)}`
+      } (Size: ${item.size}, Color: ${item.color}) - $${item.price.toFixed(2)}
+      <button class="remove-item" data-index="${index}">Remove</button>`
     );
     cartItems.append(li);
     totalPrice += item.price;
@@ -67,6 +75,19 @@ function updateCart() {
 
   $("#cart-count").text(cart.length);
   $("#total-price").text(totalPrice.toFixed(2));
+
+  // Add event listener for remove buttons
+  $(".remove-item").on("click", function () {
+    const index = $(this).data("index");
+    removeFromCart(index);
+  });
+}
+
+function removeFromCart(index) {
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  cart.splice(index, 1); // Remove the item at the specified index
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCart(); // Update the cart display
 }
 
 function closeCart() {

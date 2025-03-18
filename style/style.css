@@ -1,3 +1,6 @@
+:root {
+  --primary-color: #f1ecec;
+}
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
@@ -6,6 +9,9 @@ body {
 }
 html {
   font-size: 62.5%;
+}
+.information__website {
+  background: var(--primary-color);
 }
 .container-title {
   max-width: 1200px;
@@ -56,12 +62,27 @@ nav ul li a:hover {
   margin-left: auto;
   margin-right: auto;
 }
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto;
+  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px; /* Max width for the modal */
+  border-radius: 8px;
 }
 
 .close {
@@ -76,6 +97,20 @@ nav ul li a:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+.remove-item {
+  background-color: #dc3545; /* Bootstrap danger color */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.remove-item:hover {
+  background-color: #c82333; /* Darker danger color */
 }
 
 .form-section {

@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   min-height: 120px;
+  background: var(--primary-color);
 }
 
 .register__body .btn-register {
@@ -47,11 +48,20 @@
   color: #fff;
 }
 .login__body .checkbox-group {
+  padding: 10px 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .login__body .checkbox-group input[type="checkbox"] {
-  margin-right: 50px;
+  width: 15px; /* Điều chỉnh kích thước checkbox nếu cần */
+  height: 15px;
+  vertical-align: middle; /* Giúp căn giữa checkbox với chữ */
+}
+.login__body .checkbox-group label {
+  font-size: 15px; /* Đảm bảo kích thước chữ phù hợp */
+  display: flex;
+  gap: 5px;
+  line-height: 1; /* Đảm bảo căn chỉnh dòng chữ */
 }
