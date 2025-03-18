@@ -1,11 +1,26 @@
 :root {
-  --primary-color: #f1ecec;
+  --primary-color: #fffcf4;
+  --color-head: #352626;
 }
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   background-color: #f4f4f4;
+}
+@keyframes changcolornameshop {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #a49494;
+  }
+  75% {
+    color: rgb(172, 125, 64);
+  }
+  100% {
+    color: rgba(225, 232, 234, 0.952);
+  }
 }
 html {
   font-size: 62.5%;
@@ -61,56 +76,6 @@ nav ul li a:hover {
   max-width: calc(100% - 48px);
   margin-left: auto;
   margin-right: auto;
-}
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  max-width: 500px; /* Max width for the modal */
-  border-radius: 8px;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-.remove-item {
-  background-color: #dc3545; /* Bootstrap danger color */
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-left: 10px;
-}
-
-.remove-item:hover {
-  background-color: #c82333; /* Darker danger color */
 }
 
 .form-section {
@@ -178,25 +143,69 @@ nav ul li a {
   background-color: #ff3f31;
 }
 /* ------------- Body ------------------ */
+/* ------ Form Cart ------- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px; /* Max width for the modal */
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.remove-item {
+  background-color: #dc3545; /* Bootstrap danger color */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.remove-item:hover {
+  background-color: #c82333; /* Darker danger color */
+}
 /* -------Header----- */
-@keyframes changcolornameshop {
-  50% {
-    color: #fff;
-  }
-  75% {
-    color: rgb(172, 125, 64);
-  }
-  100% {
-    color: rgba(225, 232, 234, 0.952);
-  }
-}
-.header-fixed .nameshop {
-  animation: changcolornameshop ease-in 10s infinite;
-}
 .header-fixed {
   position: sticky;
   top: -40px;
   z-index: 1;
+  background: var(--color-head);
+  padding: 10px 0;
+}
+.header-fixed .nameshop a {
+  text-decoration: none;
+  color: #fff;
+  animation: changcolornameshop ease-in 10s infinite;
 }
 .header-fixed .body {
   display: flex;
@@ -207,10 +216,6 @@ nav ul li a {
 .header-fixed h1 {
   text-align: center;
   margin: 0;
-}
-.header-fixed {
-  background: #333;
-  padding: 10px 0;
 }
 
 .nav ul {
@@ -295,13 +300,20 @@ nav ul li a {
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
 }
 
 .promo img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
-
+.promo :hover img {
+  transform: scale(1.1);
+}
 .promo h2 {
   text-transform: uppercase;
   font-size: 24px;
@@ -447,15 +459,19 @@ nav ul li a {
   padding: 0;
   text-align: center;
 }
+
 .aboutitems a {
   text-decoration: none;
   color: white;
+}
+.aboutitems a:hover {
+  color: red;
 }
 
 /* shoes */
 .shoes-section {
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: var(--primary-color);
 }
 
 .shoes-container-title {
@@ -622,6 +638,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 0;
+  background: var(--color-head);
 }
 
 .footer-container {
