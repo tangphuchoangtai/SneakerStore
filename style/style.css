@@ -28,11 +28,7 @@ html {
 .information__website {
   background: var(--primary-color);
 }
-.container-title {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -49,13 +45,15 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 10px;
+  display: inline;
+  margin: 0 15px;
   position: relative;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
   padding: 5px 10px;
   display: block;
   transition: background-color 0.3s;
@@ -110,22 +108,6 @@ nav ul li a:hover {
   margin: 0 auto;
   display: block;
 }
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
 
 .btn {
   display: inline-block;
@@ -142,7 +124,15 @@ nav ul li a {
 .btn:hover {
   background-color: #ff3f31;
 }
+
+.nameshop a {
+  text-decoration: none;
+  color: #fff;
+  animation: changcolornameshop ease-in 10s infinite;
+}
+
 /* ------------- Body ------------------ */
+
 /* ------ Form Cart ------- */
 .modal {
   display: none; /* Hidden by default */
@@ -202,11 +192,7 @@ nav ul li a {
   background: var(--color-head);
   padding: 10px 0;
 }
-.header-fixed .nameshop a {
-  text-decoration: none;
-  color: #fff;
-  animation: changcolornameshop ease-in 10s infinite;
-}
+
 .header-fixed .body {
   display: flex;
   align-items: center;
@@ -283,13 +269,12 @@ nav ul li a {
 }
 
 .hero h2 {
-  margin: 0;
-  font-size: 3em;
+  font-size: 3rem;
   color: #333;
 }
 
 .hero p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   margin: 10px 0 30px;
   color: #333;
 }
@@ -470,7 +455,7 @@ nav ul li a {
 .contact-section {
   width: 100vw;
   height: 100vh;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   padding: 10px 0 10px;
   background-image: url("../images/Banner01.jpg");
   background-size: cover;
