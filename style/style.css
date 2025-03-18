@@ -358,12 +358,6 @@ nav ul li a {
   margin: 20px 0 10px;
 }
 
-.about,
-.contact {
-  padding: 50px 0;
-  text-align: center;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -425,6 +419,10 @@ nav ul li a {
   display: block;
 }
 /* -------------- About us ------------------ */
+.about {
+  padding: 50px 0;
+  text-align: center;
+}
 .aboutus {
   text-align: center;
   padding: 50px 0;
@@ -468,7 +466,29 @@ nav ul li a {
   color: red;
 }
 
-/* shoes */
+/* -------------- Contact --------------- */
+.contact-section {
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 100px;
+  padding: 10px 0 10px;
+  background-image: url("../images/Banner01.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.contact-content {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/*------------ shoes ---------------*/
 .shoes-section {
   padding: 20px;
   background-color: var(--primary-color);
