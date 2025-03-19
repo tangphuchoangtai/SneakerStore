@@ -76,15 +76,6 @@ nav ul li a:hover {
   margin-right: auto;
 }
 
-.form-section {
-  padding: 50px 0;
-  text-align: center;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
 .form-group label {
   display: block;
   margin-bottom: 5px;

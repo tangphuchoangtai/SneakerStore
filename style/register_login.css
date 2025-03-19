@@ -3,17 +3,22 @@
   width: 100%;
   max-width: 600px; /* Adjust the max-width as needed */
   padding: 20px;
-  background-color: #fff;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 .form-wrapper {
-  padding: 30px 0;
+  background-image: url("../images/Banner01.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 120px;
-  background: var(--primary-color);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
 }
 
 .register__body .btn-register {
@@ -33,6 +38,7 @@
 }
 
 /* Login */
+
 .login__body .btn-login {
   background-color: #28a745;
   color: #ffffff;
