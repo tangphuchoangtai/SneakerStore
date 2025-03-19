@@ -528,9 +528,7 @@ nav ul li a:hover {
   text-decoration: none;
   color: #171100;
 }
-.shoes-products .shoes-product p:hover {
-  color: #ff3f31;
-}
+
 .shoes-products .shoes-product h3:hover {
   color: #ff3f31;
 }
@@ -573,8 +571,9 @@ nav ul li a:hover {
 
 .product-image img {
   width: 300px;
-  height: auto;
-  border-radius: 10px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -610,7 +609,23 @@ nav ul li a:hover {
 .btn-add-to-cart:hover {
   background-color: #218838;
 }
+/* Product-Detail-Cart */
+.cart-item-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
 
+.cart-item-info {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.cart-item-info p {
+  margin: 0;
+  font-size: 14px;
+}
 /* Cart Modal Styles */
 .modal {
   display: none; /* Hidden by default */

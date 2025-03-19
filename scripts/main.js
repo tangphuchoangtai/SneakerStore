@@ -123,3 +123,75 @@ document.addEventListener("DOMContentLoaded", (event) => {
     dropdownContent.style.display = "none";
   });
 });
+
+// Danh sách sản phẩm (có thể lấy từ API hoặc định nghĩa sẵn)
+const products = [
+  {
+    id: 1,
+    name: "Sporty Shoes",
+    price: 99.99,
+    img: "./images/giay1.jpg",
+    description: "High-quality sporty shoes",
+    sizes: ["7", "8", "9", "10"],
+    colors: ["Red", "Blue", "Black"],
+  },
+  {
+    id: 2,
+    name: "Running Shoes",
+    price: 79.99,
+    img: "./images/giay2.jpg",
+    description: "Comfortable running shoes",
+    sizes: ["7", "8", "9", "10"],
+    colors: ["Red", "Blue", "Black"],
+  },
+  {
+    id: 3,
+    name: "Casual Shoes",
+    price: 119.99,
+    img: "./images/giay3.jpg",
+    description: "Comfortable running shoes",
+    sizes: ["7", "8", "9", "10"],
+    colors: ["Red", "Blue", "Black"],
+  },
+  {
+    id: 4,
+    name: "Casual Shoes",
+    price: 120.0,
+    img: "./images/giay4.jpg",
+    description: "Comfortable running shoes",
+    sizes: ["7", "8", "9", "10"],
+    colors: ["Red", "Blue", "Black"],
+  },
+  {
+    id: 5,
+    name: "Model Shoes",
+    price: 250.0,
+    img: "./images/giay5.jpg",
+    description: "Comfortable running shoes",
+    sizes: ["7", "8", "9", "10"],
+    colors: ["Red", "Blue", "Black"],
+  },
+  {
+    id: 6,
+    name: "Classic Shoes",
+    price: 179.99,
+    img: "./images/giay6.jpg",
+    description: "Comfortable running shoes",
+    sizes: ["7", "8", "9", "10"],
+    colors: ["Red", "Blue", "Black"],
+  },
+];
+
+// Lưu thông tin sản phẩm vào Local Storage khi bấm vào sản phẩm
+document.querySelectorAll(".product-link").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+    const productId = parseInt(link.getAttribute("data-id"));
+    const product = products.find((p) => p.id === productId);
+
+    if (product) {
+      localStorage.setItem("selectedProduct", JSON.stringify(product));
+      window.location.href = "product-detail.html"; // Chuyển hướng đến trang chi tiết sản phẩm
+    }
+  });
+});

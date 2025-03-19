@@ -63,31 +63,21 @@
     <main>
       <div class="product-detail">
         <div class="product-image">
-          <img id="product-img" src="image-product" alt="Product Image" />
+          <img id="product-img" src="" alt="Product Image" />
         </div>
         <div class="product-info">
           <h2 id="product-name">Product Name</h2>
           <p id="product-price">$0.00</p>
           <div class="product-options">
             <label for="product-size">Size:</label>
-            <select id="product-size">
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
+            <select id="product-size"></select>
+          </div>
+          <div class="product-options">
+            <label for="product-color">Color:</label>
+            <select id="product-color"></select>
           </div>
           <p id="product-description">Product description goes here...</p>
-          <!-- <button class="btn btn-add-to-cart">Add to Cart</button> -->
-
-          <button
-            class="shoes-btn shoes-add-to-cart"
-            data-name="Sporty Shoes"
-            data-price="99.99"
-            data-img="./images/giay1.jpg"
-          >
-            Add to Cart
-          </button>
+          <button class="btn btn-add-to-cart">Add to Cart</button>
         </div>
       </div>
     </main>
@@ -141,5 +131,9 @@
         <button class="btn" onclick="checkout()">Checkout</button>
       </div>
     </div>
+
+    <li>
+      <a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+    </li>
   </body>
 </html>

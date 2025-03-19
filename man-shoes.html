@@ -62,9 +62,7 @@
             <div class="shoes-products">
               <!-- Item 1 -->
               <div class="shoes-product">
-                <a
-                  href="product-detail.html?name=Sporty%20Shoes&price=99.99&img=./images/giay1.jpg&description=High-quality%20sporty%20shoes"
-                >
+                <a href="product-detail.html" class="product-link" data-id="1">
                   <img
                     src="./images/giay1.jpg"
                     alt="Shoes"
@@ -101,9 +99,15 @@
               </div>
               <!-- Item 2 -->
               <div class="shoes-product">
-                <img src="./images/giay1.jpg" alt="Shoes" class="shoes-thumb" />
-                <h3>Sporty Shoes</h3>
-                <p>$99.99</p>
+                <a href="product-detail.html" class="product-link" data-id="2">
+                  <img
+                    src="./images/giay2.jpg"
+                    alt="Shoes"
+                    class="shoes-thumb"
+                  />
+                  <h3>Sporty Shoes</h3>
+                  <p>$79.99</p>
+                </a>
                 <div class="shoes-options">
                   <label for="size-sporty-shoes">Size:</label>
                   <select id="size-sporty-shoes" class="shoes-size">
@@ -124,82 +128,26 @@
                 <button
                   class="shoes-btn shoes-add-to-cart"
                   data-name="Sporty Shoes"
-                  data-price="99.99"
-                  data-img="./images/giay1.jpg"
-                >
-                  Add to Cart
-                </button>
-              </div>
-              <!-- Item 3 -->
-              <div class="shoes-product">
-                <img src="./images/giay1.jpg" alt="Shoes" class="shoes-thumb" />
-                <h3>Sporty Shoes</h3>
-                <p>$99.99</p>
-                <div class="shoes-options">
-                  <label for="size-sporty-shoes">Size:</label>
-                  <select id="size-sporty-shoes" class="shoes-size">
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                  </select>
-                </div>
-                <div class="shoes-options">
-                  <label for="color-sporty-shoes">Color:</label>
-                  <select id="color-sporty-shoes" class="shoes-color">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="black">Black</option>
-                  </select>
-                </div>
-                <button
-                  class="shoes-btn shoes-add-to-cart"
-                  data-name="Sporty Shoes"
-                  data-price="99.99"
-                  data-img="./images/giay1.jpg"
-                >
-                  Add to Cart
-                </button>
-              </div>
-              <!-- Item 4 -->
-              <div class="shoes-product">
-                <img src="./images/giay2.jpg" alt="Shoes" class="shoes-thumb" />
-                <h3>Casual Shoes</h3>
-                <p>$79.99</p>
-                <div class="shoes-options">
-                  <label for="size-casual-shoes">Size:</label>
-                  <select id="size-casual-shoes" class="shoes-size">
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                  </select>
-                </div>
-                <div class="shoes-options">
-                  <label for="color-casual-shoes">Color:</label>
-                  <select id="color-casual-shoes" class="shoes-color">
-                    <option value="white">White</option>
-                    <option value="grey">Grey</option>
-                    <option value="brown">Brown</option>
-                  </select>
-                </div>
-                <button
-                  class="shoes-btn shoes-add-to-cart"
-                  data-name="Casual Shoes"
                   data-price="79.99"
                   data-img="./images/giay2.jpg"
                 >
                   Add to Cart
                 </button>
               </div>
-              <!-- Item 5 -->
+              <!-- Item 3 -->
               <div class="shoes-product">
-                <img src="./images/giay3.jpg" alt="Shoes" class="shoes-thumb" />
-                <h3>Running Shoes</h3>
-                <p>$119.99</p>
+                <a href="product-detail.html" class="product-link" data-id="3">
+                  <img
+                    src="./images/giay3.jpg"
+                    alt="Shoes"
+                    class="shoes-thumb"
+                  />
+                  <h3>Casual Shoes</h3>
+                  <p>$119.99</p>
+                </a>
                 <div class="shoes-options">
-                  <label for="size-running-shoes">Size:</label>
-                  <select id="size-running-shoes" class="shoes-size">
+                  <label for="size-sporty-shoes">Size:</label>
+                  <select id="size-sporty-shoes" class="shoes-size">
                     <option value="7">7</option>
                     <option value="8">8</option>
                     <option value="9">9</option>
@@ -207,30 +155,110 @@
                   </select>
                 </div>
                 <div class="shoes-options">
-                  <label for="color-running-shoes">Color:</label>
-                  <select id="color-running-shoes" class="shoes-color">
-                    <option value="green">Green</option>
+                  <label for="color-sporty-shoes">Color:</label>
+                  <select id="color-sporty-shoes" class="shoes-color">
+                    <option value="red">Red</option>
                     <option value="blue">Blue</option>
                     <option value="black">Black</option>
                   </select>
                 </div>
                 <button
                   class="shoes-btn shoes-add-to-cart"
-                  data-name="Running Shoes"
+                  data-name="Sporty Shoes"
                   data-price="119.99"
                   data-img="./images/giay3.jpg"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <!-- Item 4 -->
+              <div class="shoes-product">
+                <a href="product-detail.html" class="product-link" data-id="4">
+                  <img
+                    src="./images/giay4.jpg"
+                    alt="Shoes"
+                    class="shoes-thumb"
+                  />
+                  <h3>Casual Shoes</h3>
+                  <p>$120.00</p>
+                </a>
+                <div class="shoes-options">
+                  <label for="size-sporty-shoes">Size:</label>
+                  <select id="size-sporty-shoes" class="shoes-size">
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="shoes-options">
+                  <label for="color-sporty-shoes">Color:</label>
+                  <select id="color-sporty-shoes" class="shoes-color">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="black">Black</option>
+                  </select>
+                </div>
+                <button
+                  class="shoes-btn shoes-add-to-cart"
+                  data-name="Sporty Shoes"
+                  data-price="120.00"
+                  data-img="./images/giay4.jpg"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <!-- Item 5 -->
+              <div class="shoes-product">
+                <a href="product-detail.html" class="product-link" data-id="5">
+                  <img
+                    src="./images/giay5.jpg"
+                    alt="Shoes"
+                    class="shoes-thumb"
+                  />
+                  <h3>Model Shoes</h3>
+                  <p>$250.00</p>
+                </a>
+                <div class="shoes-options">
+                  <label for="size-sporty-shoes">Size:</label>
+                  <select id="size-sporty-shoes" class="shoes-size">
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="shoes-options">
+                  <label for="color-sporty-shoes">Color:</label>
+                  <select id="color-sporty-shoes" class="shoes-color">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="black">Black</option>
+                  </select>
+                </div>
+                <button
+                  class="shoes-btn shoes-add-to-cart"
+                  data-name="Sporty Shoes"
+                  data-price="250.00"
+                  data-img="./images/giay5.jpg"
                 >
                   Add to Cart
                 </button>
               </div>
               <!-- Item 6 -->
               <div class="shoes-product">
-                <img src="./images/giay3.jpg" alt="Shoes" class="shoes-thumb" />
-                <h3>Running Shoes</h3>
-                <p>$119.99</p>
+                <a href="product-detail.html" class="product-link" data-id="6">
+                  <img
+                    src="./images/giay6.jpg"
+                    alt="Shoes"
+                    class="shoes-thumb"
+                  />
+                  <h3>Classic Shoes</h3>
+                  <p>$179.99</p>
+                </a>
                 <div class="shoes-options">
-                  <label for="size-running-shoes">Size:</label>
-                  <select id="size-running-shoes" class="shoes-size">
+                  <label for="size-sporty-shoes">Size:</label>
+                  <select id="size-sporty-shoes" class="shoes-size">
                     <option value="7">7</option>
                     <option value="8">8</option>
                     <option value="9">9</option>
@@ -238,23 +266,22 @@
                   </select>
                 </div>
                 <div class="shoes-options">
-                  <label for="color-running-shoes">Color:</label>
-                  <select id="color-running-shoes" class="shoes-color">
-                    <option value="green">Green</option>
+                  <label for="color-sporty-shoes">Color:</label>
+                  <select id="color-sporty-shoes" class="shoes-color">
+                    <option value="red">Red</option>
                     <option value="blue">Blue</option>
                     <option value="black">Black</option>
                   </select>
                 </div>
                 <button
                   class="shoes-btn shoes-add-to-cart"
-                  data-name="Running Shoes"
-                  data-price="119.99"
-                  data-img="./images/giay3.jpg"
+                  data-name="Sporty Shoes"
+                  data-price="179.99"
+                  data-img="./images/giay6.jpg"
                 >
                   Add to Cart
                 </button>
               </div>
-              <!-- Add more products as needed -->
             </div>
           </div>
         </div>
