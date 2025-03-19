@@ -494,24 +494,45 @@ nav ul li a:hover {
   text-align: center;
   width: 250px; /* Increase the width */
   background-color: #ffffff;
-  box-sizing: border-box; /* Ensure padding and borders are included in the width */
+  box-sizing: border-box;
 }
 
 .shoes-product img.shoes-thumb {
   width: 100%;
-  height: 200px; /* Increase the height */
-  object-fit: cover; /* Ensure images cover the area without stretching */
+  height: 200px;
+  object-fit: cover;
   margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.7s ease;
+}
+.shoes-product img.shoes-thumb:hover {
+  transform: scale(1.1);
 }
 
 .shoes-product h3 {
-  font-size: 1.4em; /* Increase the font size */
+  color: #171100;
+  font-size: 1.4em;
   margin-bottom: 10px;
+  transition: transform 0.5s ease;
 }
 
 .shoes-product p {
-  font-size: 1.2em; /* Increase the font size */
+  font-size: 1.2em;
   margin-bottom: 10px;
+  transition: transform 0.5s ease;
+}
+
+.shoes-products .shoes-product a {
+  text-decoration: none;
+  color: #171100;
+}
+.shoes-products .shoes-product p:hover {
+  color: #ff3f31;
+}
+.shoes-products .shoes-product h3:hover {
+  color: #ff3f31;
 }
 
 .shoes-product .shoes-options {
@@ -538,6 +559,55 @@ nav ul li a:hover {
 }
 
 .shoes-product .shoes-btn:hover {
+  background-color: #218838;
+}
+/* Product detail  */
+
+.product-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+
+.product-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+  max-width: 400px;
+}
+
+.product-info h2 {
+  text-decoration: none;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.product-options {
+  margin-bottom: 15px;
+}
+
+.btn-add-to-cart {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
   background-color: #218838;
 }
 
