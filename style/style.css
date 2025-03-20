@@ -162,7 +162,7 @@ nav ul li a:hover {
   cursor: pointer;
 }
 .remove-item {
-  background-color: #dc3545; /* Bootstrap danger color */
+  background-color: #dc3545;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -171,9 +171,8 @@ nav ul li a:hover {
   font-size: 14px;
   margin-left: 10px;
 }
-
-.remove-item:hover {
-  background-color: #c82333; /* Darker danger color */
+*/ .remove-item:hover {
+  background-color: #c82333;
 }
 /* -------Header----- */
 .header-fixed {
@@ -559,21 +558,21 @@ nav ul li a:hover {
 .shoes-product .shoes-btn:hover {
   background-color: #218838;
 }
-/* Product detail  */
 
+/* Product Detail Styles */
 .product-detail {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 20px;
   padding: 20px;
-  gap: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-image img {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -582,13 +581,11 @@ nav ul li a:hover {
 }
 
 .product-info h2 {
-  text-decoration: none;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .product-info p {
-  text-decoration: none;
   font-size: 18px;
   margin-bottom: 15px;
 }
@@ -600,8 +597,8 @@ nav ul li a:hover {
 .btn-add-to-cart {
   background-color: #28a745;
   color: white;
-  padding: 10px 20px;
   border: none;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -609,59 +606,85 @@ nav ul li a:hover {
 .btn-add-to-cart:hover {
   background-color: #218838;
 }
-/* Product-Detail-Cart */
+
+/* Cart Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cart-items-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
 .cart-item-img {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   margin-right: 10px;
+  border-radius: 5px;
 }
 
 .cart-item-info {
-  display: inline-block;
-  vertical-align: top;
+  flex: 1;
+  margin-left: 10px;
 }
 
 .cart-item-info p {
   margin: 0;
   font-size: 14px;
 }
-/* Cart Modal Styles */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+.remove-item {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+.remove-item:hover {
+  background-color: #c82333;
 }
 
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
   cursor: pointer;
 }
-
 /* Cart item styles */
 .cart-thumb {
   width: 50px;

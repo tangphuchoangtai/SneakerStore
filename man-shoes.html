@@ -335,5 +335,19 @@
         <button class="btn" onclick="checkout()">Checkout</button>
       </div>
     </div>
+
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <ul id="cart-items" class="cart-items-list"></ul>
+        <div class="cart-summary">
+          <p>Total: $<span id="total-price">0.00</span></p>
+          <button class="btn btn-checkout" onclick="checkout()">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
