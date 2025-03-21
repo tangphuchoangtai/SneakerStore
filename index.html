@@ -178,7 +178,7 @@
                     background-image: url('https://ananas.vn/wp-content/uploads/catalogy-1.jpg');
                   "
                 >
-                  <a href="#!">
+                  <a href="./man-shoes.html">
                     <h2>Men's shoes</h2>
                   </a>
                   <ul>
@@ -195,7 +195,7 @@
                     background-image: url('https://ananas.vn/wp-content/uploads/catalogy-2.jpg');
                   "
                 >
-                  <a href="#!">
+                  <a href="./women-shoes.html">
                     <h2>Women's shoes</h2>
                   </a>
                   <ul>
@@ -275,14 +275,20 @@
         <p>&copy; 2025 Sneaker Store. All rights reserved.</p>
       </div>
     </footer>
-    <!------------- Form Cart ---------------->
-    <div id="cart-modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeCart()">&times;</span>
-        <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <p>Total: $<span id="total-price">0.00</span></p>
-        <button class="btn btn-checkout" onclick="checkout()">Checkout</button>
+    <!-- Form Cart -->
+    <div class="Cart-form">
+      <div id="cart-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeCart()">&times;</span>
+          <h2>Your Cart</h2>
+          <ul id="cart-items" class="cart-items-list"></ul>
+          <div class="cart-summary">
+            <p>Total: $<span id="total-price">0.00</span></p>
+            <button class="btn btn-checkout" onclick="checkout()">
+              Checkout
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </body>

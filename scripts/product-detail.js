@@ -53,13 +53,11 @@ function updateCartContent() {
   cart.forEach((item, index) => {
     const li = document.createElement("li");
     li.innerHTML = `
-      <img src="${item.img}" alt="${item.name}" class="cart-item-img" />
+    <img src="${item.img}" alt="${item.name}" class="cart-item-img" /> ${item.name}
       <div class="cart-item-info">
-        <p>${item.name}</p>
-        <p>Size: ${item.size}, Color: ${item.color}</p>
-        <p>Price: $${item.price}</p>
-        <button class="remove-item" data-index="${index}">Remove</button>
+         <p> | Size: ${item.size} | Color: ${item.color} | - $${item.price}</p>
       </div>
+      <button class="remove-item" data-index="${index}">Remove</button>
     `;
     cartItems.appendChild(li);
     totalPrice += parseFloat(item.price);

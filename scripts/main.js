@@ -64,9 +64,10 @@ function updateCart() {
 
   cart.forEach((item, index) => {
     let li = $("<li></li>").html(
-      `<img src="${item.img}" alt="${item.name}" class="cart-thumb"> ${
-        item.name
-      } (Size: ${item.size}, Color: ${item.color}) - $${item.price.toFixed(2)}
+      `<img src="${item.img}" alt="${item.name}" class="cart-item-img"> ${item.name} 
+      <div class="cart-item-info">
+         <p> | Size: ${item.size} | Color: ${item.color} | - $${item.price}</p>
+      </div>
       <button class="remove-item" data-index="${index}">Remove</button>`
     );
     cartItems.append(li);
@@ -182,6 +183,64 @@ const products = [
   },
 ];
 
+// Danh sách sản phẩm dành cho women-shoes.html
+const womenProducts = [
+  {
+    id: 1,
+    name: "Elegant Heels",
+    price: 129.99,
+    img: "./images/ws1.jpg",
+    description: "Stylish and comfortable heels for any occasion.",
+    sizes: ["5", "6", "7", "8"],
+    colors: ["Red", "Black", "Beige"],
+  },
+  {
+    id: 2,
+    name: "Casual Flats",
+    price: 89.99,
+    img: "./images/ws2.jpg",
+    description: "Perfect flats for everyday wear.",
+    sizes: ["5", "6", "7", "8", "9"],
+    colors: ["Blue", "White", "Pink"],
+  },
+  {
+    id: 3,
+    name: "Casual Shoes",
+    price: 99.99,
+    img: "./images/ws3.jpg",
+    description: "Lightweight and durable Casual Shoes.",
+    sizes: ["5", "6", "7", "8", "9"],
+    colors: ["Purple", "Gray", "Black"],
+  },
+  {
+    id: 4,
+    name: "Casual Shoes",
+    price: 149.99,
+    img: "./images/ws4.jpg",
+    description: "Trendy ankle boots for a chic look.",
+    sizes: ["5", "6", "7", "8", "9"],
+    colors: ["Brown", "Black", "Tan"],
+  },
+  {
+    id: 5,
+    name: "Nike Shoes",
+    price: 79.99,
+    img: "./images/ws5.jpg",
+    description: "Comfortable sandals for summer days.",
+    sizes: ["5", "6", "7", "8", "9"],
+    colors: ["Yellow", "White", "Blue"],
+  },
+  {
+    id: 6,
+    name: "Puma Shoes",
+    price: 139.99,
+    img: "./images/ws6.jpg",
+    description: "Timeless pumps for formal occasions.",
+    sizes: ["5", "6", "7", "8", "9"],
+    colors: ["Black", "Red", "Nude"],
+  },
+];
+
 // Lưu thông tin sản phẩm vào Local Storage khi bấm vào sản phẩm
 document.querySelectorAll(".product-link").forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -191,6 +250,20 @@ document.querySelectorAll(".product-link").forEach((link) => {
 
     if (product) {
       localStorage.setItem("selectedProduct", JSON.stringify(product));
+      window.location.href = "product-detail.html"; // Chuyển hướng đến trang chi tiết sản phẩm
+    }
+  });
+});
+
+// Lưu thông tin sản phẩm vào Local Storage khi bấm vào sản phẩm trong women-shoes.html
+document.querySelectorAll(".women-product-link").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+    const productId = parseInt(link.getAttribute("data-id")); // Lấy ID sản phẩm từ thuộc tính data-id
+    const product = womenProducts.find((p) => p.id === productId); // Tìm sản phẩm trong danh sách womenProducts
+
+    if (product) {
+      localStorage.setItem("selectedProduct", JSON.stringify(product)); // Lưu sản phẩm vào Local Storage
       window.location.href = "product-detail.html"; // Chuyển hướng đến trang chi tiết sản phẩm
     }
   });
