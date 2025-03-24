@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // alert("Welcome to Sneaker Store! Enjoy your shopping.");
+  alert("Welcome to Sneaker Store! Enjoy your shopping.");
 
   if (!localStorage.getItem("cart")) {
     localStorage.setItem("cart", JSON.stringify([]));
