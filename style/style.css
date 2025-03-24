@@ -126,7 +126,11 @@ nav ul li a:hover {
   color: #fff;
   animation: changcolornameshop ease-in 10s infinite;
 }
-
+.divider {
+  border: none;
+  border-top: 1px dashed #161616;
+  margin: 15px 0;
+}
 /* ------------- Body ------------------ */
 
 /* ------ Form Cart ------- */
@@ -574,6 +578,7 @@ nav ul li a:hover {
 
 .product-info {
   max-width: 400px;
+  margin-left: 15px;
 }
 
 .product-info h2 {
@@ -588,6 +593,11 @@ nav ul li a:hover {
 
 .product-options {
   margin-bottom: 15px;
+}
+.product-smallinfo {
+  display: flex;
+  gap: 20px; /* Tạo khoảng cách giữa Size và Color */
+  align-items: center;
 }
 
 .btn-add-to-cart {

@@ -57,7 +57,7 @@ function updateCartContent() {
       <div class="cart-item-info">
          <p> | Size: ${item.size} | Color: ${item.color} | - $${item.price}</p>
       </div>
-      <button class="remove-item" data-index="${index}">Remove</button>
+      <button class="remove-item " data-index="${index}">Remove</button>
     `;
     cartItems.appendChild(li);
     totalPrice += parseFloat(item.price);
