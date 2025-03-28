@@ -1,6 +1,8 @@
 :root {
   --primary-color: #fffcf4;
   --color-head: #352626;
+  --color-btn-primary: #dc3545;
+  --color-btn-hover: #c82333;
 }
 body {
   font-size: 1.6rem;
@@ -546,8 +548,8 @@ nav ul li a:hover {
 }
 
 .shoes-product .shoes-btn {
-  background-color: #28a745;
-  color: #ffffff;
+  background-color: var(--color-btn-primary);
+  color: #fff;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
@@ -556,9 +558,54 @@ nav ul li a:hover {
 }
 
 .shoes-product .shoes-btn:hover {
-  background-color: #218838;
+  background-color: var(--color-btn-hover);
+  color: #fff;
 }
 
+.name-search {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.name-search .name-product {
+  flex: 1;
+  text-align: center;
+  margin-left: 25%;
+}
+.name-search .search-bar {
+  margin-right: 50px;
+}
+/* CSS search-bar */
+.name-search .search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.name-search .search-input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.name-search .btn-search {
+  padding: 10px 20px;
+  background: var(--color-btn-primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.name-search .btn-search:hover {
+  background: var(--color-btn-hover);
+  color: #fff;
+}
 /* Product Detail Styles */
 .product-detail {
   display: flex;
@@ -726,7 +773,7 @@ nav ul li a:hover {
   cursor: pointer;
 }
 .Cart-form .btn-checkout {
-  background-color: #dc3545;
+  background-color: var(--color-btn-primary);
   color: white;
   border: none;
   padding: 8px 15px;
@@ -737,7 +784,7 @@ nav ul li a:hover {
   transition: background-color 0.3s ease;
 }
 .Cart-form .btn-checkout:hover {
-  background-color: #c82333;
+  background-color: var(--color-btn-hover);
   color: #fff;
 }
 /*-------------- Footer ------------------*/

@@ -126,6 +126,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
     dropdownContent.style.display = "none";
   });
 });
+// chức năng search
+document.getElementById("search-btn").addEventListener("click", function () {
+  const searchTerm = document
+    .getElementById("search-input")
+    .value.toLowerCase(); // Lấy giá trị tìm kiếm và chuyển thành chữ thường
+  const products = document.querySelectorAll(".shoes-product"); // Lấy tất cả sản phẩm
+
+  products.forEach((product) => {
+    const productName = product.querySelector("h3").textContent.toLowerCase(); // Lấy tên sản phẩm và chuyển thành chữ thường
+
+    if (productName.includes(searchTerm)) {
+      product.style.display = "block"; // Hiển thị sản phẩm nếu khớp
+    } else {
+      product.style.display = "none"; // Ẩn sản phẩm nếu không khớp
+    }
+  });
+});
+// nhấn enter để search
+document
+  .getElementById("search-input")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      document.getElementById("search-btn").click();
+    }
+  });
 
 // Danh sách sản phẩm (có thể lấy từ API hoặc định nghĩa sẵn)
 const products = [
