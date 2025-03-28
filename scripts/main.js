@@ -152,7 +152,7 @@ document
     }
   });
 
-// Danh sách sản phẩm (có thể lấy từ API hoặc định nghĩa sẵn)
+// Danh sách sản phẩm (có thể lấy từ API hoặc định nghĩa sẵn
 const products = [
   {
     id: 1,
@@ -267,6 +267,49 @@ const womenProducts = [
     colors: ["Black", "Red", "Nude"],
   },
 ];
+
+const otherProduct = [
+  {
+    id: 1,
+    name: "Backpack Sport",
+    price: 150.0,
+    img: "./images/balo3.jpg",
+    description: "Stylish and comfortable heels for any occasion.",
+    sizes: ["M", "L", "XL"],
+    colors: ["Black"],
+  },
+  {
+    id: 2,
+    name: "Backpack Sport",
+    price: 150.0,
+    img: "./images/balo2.jpg",
+    description: "Stylish and comfortable heels for any occasion.",
+    sizes: ["M", "L", "XL"],
+    colors: ["Black"],
+  },
+  {
+    id: 3,
+    name: "Backpack Laptop",
+    price: 150.0,
+    img: "./images/balo1.jpg",
+    description: "Stylish and comfortable heels for any occasion.",
+    sizes: ["M", "L", "XL"],
+    colors: ["Black"],
+  },
+];
+// Lưu thông tin sản phẩm vào Local Storage khi bấm vào sản phẩm Other product
+document.querySelectorAll(".other-product-lines").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+    const productId = parseInt(link.getAttribute("data-id"));
+    const product = otherProduct.find((p) => p.id === productId);
+
+    if (product) {
+      localStorage.setItem("selectedProduct", JSON.stringify(product)); // Lưu sản phẩm vào Local Storage
+      window.location.href = "product-detail.html"; // Chuyển hướng đến trang chi tiết sản phẩm
+    }
+  });
+});
 
 // Lưu thông tin sản phẩm vào Local Storage khi bấm vào sản phẩm
 document.querySelectorAll(".product-link").forEach((link) => {
